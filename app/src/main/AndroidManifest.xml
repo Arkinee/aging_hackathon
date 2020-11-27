@@ -1,21 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.elderlink.android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:name=".src.ApplicationClass"
+        android:allowBackup="false"
+        android:icon="@drawable/r_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/r_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+        <activity
+            android:name=".src.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".src.center.CenterActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <activity
+            android:name=".src.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".src.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".src.join.JoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".src.schedule.ScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".src.map.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".src.status.StatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".src.chat.ChatActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- naver map -->
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="@string/naver_app_key" />
+
+        <!-- Firebase Cloud Messaging Service -->
+        <service
+            android:name=".src.fcm.FirebaseCloudMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Kakao social login-->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
     </application>
 
 </manifest>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="360:103"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/item_chat_iv_other"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/icon_hungry" />
+
+        <TextView
+            android:id="@+id/item_chat_tv_name_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nanum_square_eb"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_chat_iv_other"
+            app:layout_constraintStart_toEndOf="@+id/item_chat_iv_other"
+            tools:text="이경영 어르신" />
+
+        <TextView
+            android:id="@+id/item_chat_tv_created_at_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/nanum_square_regular"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/item_chat_tv_name_other"
+            app:layout_constraintTop_toTopOf="@+id/item_chat_iv_other"
+            tools:text="3:21" />
+
+        <!-- my -->
+        <ImageView
+            android:id="@+id/item_chat_iv_mine"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ico_sleep" />
+
+        <TextView
+            android:id="@+id/item_chat_tv_name_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="17dp"
+            android:fontFamily="@font/nanum_square_eb"
+            android:text="나"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/item_chat_iv_mine"
+            app:layout_constraintEnd_toStartOf="@+id/item_chat_iv_mine" />
+
+        <TextView
+            android:id="@+id/item_chat_tv_created_at_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/nanum_square_regular"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/item_chat_tv_name_mine"
+            app:layout_constraintTop_toTopOf="@+id/item_chat_iv_mine"
+            tools:text="3:21" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/src_schedule_radius_15"
+        app:layout_constraintDimensionRatio="320:432"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dialog_schedule_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="33dp"
+            android:background="@null"
+            android:fontFamily="@font/nanum_square_eb"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="김말순 어르신" />
+
+        <View
+            android:id="@+id/dialog_schedule_add_view_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="320:45"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_tv_name" />
+
+        <LinearLayout
+            android:id="@+id/dialog_schedule_linear_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_add_view_top">
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="31dp"
+                android:src="@drawable/ic_mini_schedule" />
+
+            <TextView
+                android:id="@+id/dialog_schedule_tv_calendar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="bottom|end"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textColorHint="#8c000000"
+                android:textSize="18sp"
+                tools:text="2020.09.24" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dialog_schedule_add_view_calendar"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="11.2dp"
+            android:background="#ab69d5"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_schedule_linear_calendar"
+            app:layout_constraintStart_toStartOf="@+id/dialog_schedule_linear_calendar"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_linear_calendar" />
+
+        <!-- time -->
+        <LinearLayout
+            android:id="@+id/dialog_schedule_linear_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="32.1dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_add_view_calendar">
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="31dp"
+                android:src="@drawable/ic_mini_clock" />
+
+            <TextView
+                android:id="@+id/dialog_schedule_tv_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="bottom|end"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textColorHint="#8c000000"
+                android:textSize="18sp"
+                tools:text="오후 2시" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dialog_schedule_add_view_time"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="11.2dp"
+            android:background="#ab69d5"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_schedule_linear_time"
+            app:layout_constraintStart_toStartOf="@+id/dialog_schedule_linear_time"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_linear_time" />
+
+        <!-- info -->
+        <LinearLayout
+            android:id="@+id/dialog_schedule_linear_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="32.1dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_add_view_time">
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="31dp"
+                android:src="@drawable/ic_mini_notelist" />
+
+            <TextView
+                android:id="@+id/dialog_schedule_tv_info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="bottom|end"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textColorHint="#8c000000"
+                android:textSize="18sp"
+                tools:text="생활관리사 방문" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dialog_schedule_add_view_info"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="11.2dp"
+            android:background="#ab69d5"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_schedule_linear_info"
+            app:layout_constraintStart_toStartOf="@+id/dialog_schedule_linear_info"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_schedule_linear_info" />
+
+        <TextView
+            android:id="@+id/dialog_schedule_add_tv_complete"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginBottom="30.7dp"
+            android:background="@drawable/src_schedule_radius_10_violet"
+            android:fontFamily="@font/nanum_square_eb"
+            android:gravity="center"
+            android:src="@drawable/banner_calandar"
+            android:text="일정 확인완료"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

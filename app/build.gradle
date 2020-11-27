@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion 30
@@ -29,5 +31,40 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.0.1")
+
+    // 카카오
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: '1.30.0'
+    implementation group: 'com.kakao.sdk', name: 'kakaotalk', version: '1.30.0'
+    implementation group: 'com.kakao.sdk', name: 'kakaolink', version: '1.30.0'
+    implementation group: 'com.kakao.sdk', name: 'plusfriend', version: '1.30.0'
+    implementation "com.kakao.sdk:v2-talk:2.0.4"
+
+
+    // 네이버 맵
+    implementation 'com.naver.maps:map-sdk:3.8.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    // 파이어베이스
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
 
 }

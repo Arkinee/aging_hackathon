@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "426818875482",
+    "firebase_url": "https://elder-link.firebaseio.com",
+    "project_id": "elder-link",
+    "storage_bucket": "elder-link.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426818875482:android:31c46bb15e4621acfc2863",
+        "android_client_info": {
+          "package_name": "com.elderlink.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426818875482-hbep2s6jlg0ejt88g6b84qsabr9omsqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elderlink.android",
+            "certificate_hash": "790a69835193f1c99ebfb605ee1ee43e82f2223a"
+          }
+        },
+        {
+          "client_id": "426818875482-2jksttgv9nrrciue6sa50fmsq8s13o13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLx3JrvCLia9OI_8aKQtFF-opTbhfDfr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426818875482-2jksttgv9nrrciue6sa50fmsq8s13o13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_background_wave" />
+
+    <ImageView
+        android:id="@+id/elder_status_iv_back"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:onClick="statusOnClick"
+        android:padding="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/join_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="360:78"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/join_iv_phone"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_status_phone_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_view_top" />
+
+
+    <TextView
+        android:id="@+id/elder_tv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/nanum_square_bold"
+        android:lineSpacingExtra="12sp"
+        android:text="어르신들의 상태를 확인하고\n대화하며 소통하세요"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/join_iv_phone"
+        app:layout_constraintStart_toEndOf="@+id/join_iv_phone"
+        app:layout_constraintTop_toTopOf="@+id/join_iv_phone" />
+
+    <View
+        android:id="@+id/elder_status_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.059"
+        app:layout_constraintTop_toBottomOf="@+id/elder_tv_top" />
+
+    <ImageView
+        android:id="@+id/elder_status_iv_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_hospital"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/elder_status_iv_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_view_top"
+        app:layout_constraintWidth_percent="0.313" />
+
+    <ImageView
+        android:id="@+id/elder_status_iv_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ico_sleep"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/elder_status_iv_1"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_view_top"
+        app:layout_constraintWidth_percent="0.313" />
+
+    <TextView
+        android:id="@+id/elder_status_tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/nanum_square_eb"
+        android:text="김막례님"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/elder_status_iv_1"
+        app:layout_constraintStart_toStartOf="@+id/elder_status_iv_1"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_iv_1" />
+
+    <TextView
+        android:id="@+id/elder_status_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/nanum_square_eb"
+        android:text="김막례님"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/elder_status_iv_2"
+        app:layout_constraintStart_toStartOf="@+id/elder_status_iv_2"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_iv_2" />
+
+    <ImageView
+        android:id="@+id/elder_status_iv_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/icon_outdoor"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/elder_status_iv_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_tv_1"
+        app:layout_constraintWidth_percent="0.313" />
+
+    <ImageView
+        android:id="@+id/elder_status_iv_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/icon_hungry"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/elder_status_iv_3"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_tv_2"
+        app:layout_constraintWidth_percent="0.313" />
+
+    <TextView
+        android:id="@+id/elder_status_tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/nanum_square_eb"
+        android:text="김막례님"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/elder_status_iv_3"
+        app:layout_constraintStart_toStartOf="@+id/elder_status_iv_3"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_iv_3" />
+
+    <TextView
+        android:id="@+id/elder_status_tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/nanum_square_eb"
+        android:text="김막례님"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/elder_status_iv_4"
+        app:layout_constraintStart_toStartOf="@+id/elder_status_iv_4"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_iv_4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/elder_status_constraint_conversation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="statusOnClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elder_status_tv_3"
+        app:layout_constraintWidth_percent="0.825">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner_call" />
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="21dp"
+            android:src="@drawable/talk_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">ElderLink</string>
+    <string name="loading">로딩중&#8230;</string>
+    <string name="naver_app_key">50f7zr9gn6</string>
+    <string name="kakao_app_key">93f7bc398c302dd1bde9905222eef24d</string>
+
+    <string name="login_tv_wording">돌봄의 기준을 만들다.</string>
+    <string name="login_tv_sign_up">회원가입하여 시작하기</string>
+    <string name="login_tv_kakao">카카오톡으로 시작하기</string>
+
+    <string name="join_hint_phone">010 - 0000 - 0000</string>
+    <string name="join_step_1_station">이동통신사</string>
+    <string name="join_tv_continue">계속하기</string>
+    <string name="join_tv_complete">완료하기</string>
+
+<!--    <string name="center_tv_purpose">-->
+<!--        본 어플리케이션은\n-->
+<!--        성남고령친화종합체험관 사업인\n-->
+<!--         &apos;고령친화산업 해커톤 공모전&apos;의 결과물로\n-->
+<!--        고령자의 삶의 질 향상을 위해\n-->
+<!--        만들어진 어플리케이션 입니다.-->
+<!--    </string>-->
+
 </resources>

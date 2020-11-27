@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat_constraint_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#dbc8e8"
+        app:layout_constraintDimensionRatio="360:74"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chat_iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:onClick="chatOnClick"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_regular"
+            android:text="어르신 대화방"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintHeight_percent="0.519"
+        app:layout_constraintTop_toBottomOf="@+id/chat_constraint_top"
+        tools:listitem="@layout/item_chat" />
+
+    <View
+        android:id="@+id/chat_view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#c192e1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_rv" />
+
+    <ImageView
+        android:id="@+id/chat_iv_mic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="chatOnClick"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_view_bottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chat_view_bottom"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum_square_eb"
+        android:text="음성채팅"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/chat_iv_mic"
+        app:layout_constraintStart_toStartOf="@+id/chat_iv_mic"
+        app:layout_constraintTop_toBottomOf="@+id/chat_iv_mic" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

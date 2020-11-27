@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_background_wave" />
+
+    <ImageView
+        android:id="@+id/center_iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/center_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/center_tv_purpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5sp"
+        android:text="본 어플리케이션은\n성남고령친화종합체험관 사업인\n&apos;고령친화산업 해커톤 공모전&apos;의 결과물로\n고령자의 삶의 질 향상을 위해\n만들어진 어플리케이션 입니다."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/center_iv_top" />
+
+    <ImageButton
+        android:id="@+id/center_iv_go_homepage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/src_center_img_btn_back"
+        android:onClick="centerOnClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_homepage"
+        app:layout_constraintEnd_toStartOf="@+id/center_iv_go_youtube"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/center_tv_purpose" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum_square_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="5sp"
+        android:text="체험관 홈페이지\n바로가기"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/center_iv_go_homepage"
+        app:layout_constraintStart_toStartOf="@+id/center_iv_go_homepage"
+        app:layout_constraintTop_toBottomOf="@+id/center_iv_go_homepage" />
+
+    <ImageButton
+        android:id="@+id/center_iv_go_youtube"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/src_center_img_btn_back"
+        android:onClick="centerOnClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_youtube"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/center_iv_go_homepage"
+        app:layout_constraintTop_toBottomOf="@+id/center_tv_purpose" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum_square_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="5sp"
+        android:text="체험관 유튜브\n바로가기"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/center_iv_go_youtube"
+        app:layout_constraintStart_toStartOf="@+id/center_iv_go_youtube"
+        app:layout_constraintTop_toBottomOf="@+id/center_iv_go_youtube" />
+
+    <TextView
+        android:id="@+id/center_tv_start"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/src_schedule_radius_20_violet"
+        android:fontFamily="@font/nanum_square_eb"
+        android:gravity="center"
+        android:onClick="centerOnClick"
+        android:text="어플리케이션 시작"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="320:40" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

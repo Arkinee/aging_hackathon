@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/join_2_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="360:96"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/join_iv_profile"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_join_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_2_view_top" />
+
+
+    <TextView
+        android:id="@+id/join_2_tv_wording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/nanum_square_bold"
+        android:lineSpacingExtra="12sp"
+        android:text="자격 검증을 위한\n개인정보를 입력해주세요."
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_iv_profile" />
+
+    <View
+        android:id="@+id/join_2_view_center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="360:62.5"
+        app:layout_constraintTop_toBottomOf="@+id/join_2_tv_wording" />
+
+    <EditText
+        android:id="@+id/join_edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:fontFamily="@font/nanum_square_bold"
+        android:gravity="center_vertical"
+        android:text="신민재"
+        android:inputType="text"
+        android:maxLength="10"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:textColor="#000000"
+        android:textColorHint="#8c000000"
+        android:textSize="18sp"
+        app:layout_constraintHeight_percent="0.063"
+        app:layout_constraintTop_toBottomOf="@+id/join_2_view_center" />
+
+    <View
+        android:id="@+id/join_view_bottom_of_name"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#ab69d5"
+        app:layout_constraintEnd_toEndOf="@+id/join_edt_name"
+        app:layout_constraintStart_toStartOf="@+id/join_edt_name"
+        app:layout_constraintTop_toBottomOf="@+id/join_edt_name"
+        app:layout_constraintWidth_percent="0.88" />
+
+    <View
+        android:id="@+id/join_view_below"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="360:95"
+        app:layout_constraintTop_toBottomOf="@+id/join_view_bottom_of_name" />
+
+    <EditText
+        android:id="@+id/join_edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:fontFamily="@font/nanum_square_bold"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:text="서울 돌보미 소속"
+        android:maxLines="1"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:textColor="#000000"
+        android:textColorHint="#8c000000"
+        android:textSize="18sp"
+        app:layout_constraintHeight_percent="0.063"
+        app:layout_constraintTop_toBottomOf="@+id/join_view_below" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#ab69d5"
+        app:layout_constraintEnd_toEndOf="@+id/join_edt_password"
+        app:layout_constraintStart_toStartOf="@+id/join_edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/join_edt_password"
+        app:layout_constraintWidth_percent="0.88" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toBottomOf="@+id/join_edt_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
